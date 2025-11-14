@@ -79,12 +79,11 @@ const Contact = () => {
                 Chamber of commerce and industry for MSME (CCIMSME), <br />
                 ISC,Falcon Infrastructure ltd, Door No. XVI/128,puthiya<br/>
                 road jn.Eloor udhyogamandal 
-                P.O., Cochin-683501,<br/>Phone:+91 9497715888
+                P.O., Cochin-683501,
               </p>
               <p>
-                📞 <a  href="tel:+914522626751"> +91 9497715888</a> ;
-                📞 <a href="tel:+914522626752">+91 9497715888</a> <br />
-                📞 <a href="tel:+91452263101">+91 9497715888</a>
+                📞 <a  href="tel:+914522626751"> +91 9497715888</a> 
+               
               </p>
               <p>
                 📧{" "}

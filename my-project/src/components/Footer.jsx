@@ -45,8 +45,7 @@ rel="noopener noreferrer"><FaYoutube /></a>
           <p><FaMapMarkerAlt />  Chamber of commerce and industry for MSME (CCIMSME), 
                 ISC,Falcon Infrastructure ltd, Door No. XVI/128,puthiya
                 road jn.Eloor udhyogamandal 
-                P.O., Cochin-683501,Phone:+91 9447055444</p>
-          <p><FaPhoneAlt /> +91 9496044555,+91 9496044555,<br/>+91 9496044555</p>
+                P.O., Cochin-683501, <br/>Phone:+91 9497715888</p>
           <p><FaEnvelope />  info@ccimsme.com</p>
         </div>
 
