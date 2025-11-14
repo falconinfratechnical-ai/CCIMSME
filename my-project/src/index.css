@@ -1,0 +1,59 @@
+/* ...existing code... */
+/* -------------- Responsive base & utilities -------------- */
+:root{
+  --max-page-width: 1200px;
+  --page-side-padding: 20px;
+  --break-lg: 1024px;
+  --break-md: 768px;
+  --break-sm: 576px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Make images and videos scale */
+img, picture, video, svg { max-width: 100%; height: auto; display: block; }
+
+/* Fluid page wrapper */
+.container {
+  width: 100%;
+  max-width: var(--max-page-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--page-side-padding);
+  padding-right: var(--page-side-padding);
+}
+
+/* Common responsive helpers */
+.row { display:flex; flex-wrap:wrap; gap: 24px; }
+.col { flex:1 1 0; min-width:0; }
+
+/* Adjust base font sizing on small screens */
+@media (max-width: 480px) {
+  html { font-size: 14px; }
+}
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+html, body, #root {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Override all serif fonts to Poppins */
+h1, h2, h3, h4, h5, h6, p, a, button, input, textarea, label {
+  font-family: "Poppins", sans-serif !important;
+}
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  .hero-section {
+    padding: 20px 10px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}

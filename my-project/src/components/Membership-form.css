@@ -1,0 +1,138 @@
+/* Base Page Layout */
+.form-page {
+  background-color: #f8fafc;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  padding: 40px 15px;
+}
+
+/* Form Container */
+.form-container {
+  background: #ffffff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  padding: 40px 50px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.form-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.form-container h1 {
+  text-align: center;
+  color: #1b2529;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Input Styles */
+.form-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Focus Effect */
+.form-group input:focus {
+  border-color: #00baff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 186, 255, 0.3);
+}
+
+/* Remove Autofill Gray Background */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset !important;
+  -webkit-text-fill-color: #000 !important;
+  caret-color: #000;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Button Row */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+/* Buttons */
+.cancel-btn,
+.submit-btn {
+  flex: 1;
+  border: none;
+  padding: 12px 0;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+/* Cancel Button */
+.cancel-btn {
+  background-color: #ff4d4d;
+  color: #fff;
+}
+
+.cancel-btn:hover {
+  background-color: #e60000;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #00baff;
+  color: #fff;
+}
+
+.submit-btn:hover {
+  background-color: #0092cc;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 480px) {
+  .form-container {
+    padding: 30px 25px;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .cancel-btn,
+  .submit-btn {
+    width: 100%;
+  }
+}
+/* input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} */
+

@@ -1,0 +1,132 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 5%;
+;
+   gap: 40px 0px 3px;
+  width: 100%;
+  max-width: 1500px; 
+  margin: 0 auto;
+  z-index: 2000;
+  font-family: "Poppins", sans-serif;
+  flex-wrap: wrap;
+}
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+ }
+.logo {
+  height: 85px;
+  width: auto;
+  cursor: pointer;
+}
+.logo-tagline {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #424242;
+  line-height: 1.4;
+  font-weight: 600;
+  max-width: 160px;
+  /* margin-left: -px; */
+   white-space: nowrap; 
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  transition: all 0.3s ease;
+  flex-wrap: wrap;
+  
+  justify-content: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #2e3ca9;
+}
+
+.navbar .highlight {
+  background: linear-gradient(135deg, #f5af19, #f12711);
+  color: #fff !important;
+  font-weight: 700;
+  padding: 10px 25px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 8px 25px rgba(241, 39, 17, 0.35);
+  transition: all 0.4s ease;
+}
+
+.navbar .highlight:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 35px rgba(241, 39, 17, 0.45);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  min-width: 180px;
+  z-index: 3000;
+}
+
+.dropdown-menu a {
+  padding: 10px 20px;
+  color: #333;
+  font-weight: 500;
+}
+
+.dropdown-menu a:hover {
+  background: #2e3ca9;
+  color: #fff;
+  border-radius: 6px;
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    gap: 15px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .navbar a {
+    font-size: 0.9rem;
+  }
+  .navbar .highlight {
+    width: 100%;
+    text-align: center;
+  }
+}

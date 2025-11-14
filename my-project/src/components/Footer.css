@@ -1,0 +1,119 @@
+.footer {
+  background: linear-gradient(135deg, #00093a, #5262be);
+  color: white;
+  padding: 60px 120px;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.footer-column h3 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.footer-column p,
+.footer-column a {
+  color: #fff;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  text-align: justify;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #ffcc00;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.social-icons {
+  margin-top: 25px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  margin-right: 10px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #fff;
+  color: #00093a;
+  transform: translateY(-3px);
+}
+
+/* 🌐 === RESPONSIVE BREAKPOINTS === */
+
+/* Medium devices (tablets) */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 50px 60px;
+  }
+
+  .footer-column h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Small devices (phones) */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 30px;
+    text-align: center;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-column p,
+  .footer-column a {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .footer {
+    padding: 30px 20px;
+  }
+
+  .footer-column h3 {
+    font-size: 1rem;
+  }
+
+  .social-icons a {
+    width: 34px;
+    height: 34px;
+    margin-right: 8px;
+  }
+}

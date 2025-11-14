@@ -1,0 +1,113 @@
+.home-wrapper {
+  opacity: 0;
+  transform: translateY(400px);
+  transition: opacity 0.3s ease, transform 0.8s ease;
+}
+
+.home-wrapper.page-enter {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.about-hero1 {
+  position: relative;
+  width: 100%; 
+  height: 230px; 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(25, 20, 75, 0.6); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay h1 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  z-index: 2;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Responsive font scaling */
+@media (max-width: 900px) {
+  .hero-overlay h1 {
+    font-size: 2.2rem;
+  }
+}
+
+
+.gallery-page {
+    padding: 60px var(--page-side-padding);
+      max-width: var(--max-page-width);
+  margin: 0 auto;
+  text-align: center;
+  /* background-color: #f8f8f8; */
+}
+
+.gallery-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.gallery-grid {
+  display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  /* border-radius: 10px; */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/*  Responsive: 2 or 1 per row on smaller screens */
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.lightbox-content { width: 80vw; max-width: 900px; }
