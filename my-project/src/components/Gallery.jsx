@@ -8,13 +8,18 @@ import img5 from "../assets/we.jpg";
 import img6 from "../assets/yes.jpg";
 import img7 from "../assets/event2.jpg";
 import img8 from "../assets/we1.jpg";
+import img9 from "../assets/event4.jpg";
+import img10 from "../assets/event5.jpg";
+import img11 from "../assets/event6.jpg";
+import img12 from "../assets/event7.jpg";
+import img13 from "../assets/event8.jpg";
+import img14 from "../assets/event9.jpg";
+
 
 const Gallery = () => {
   const [animate, setAnimate] = useState(false);
-  const images = [ img3, img4, img5, img6, img8,
-    img3, img4, img5, img6, img8,img3, img4, img5, img6, img8
-    ,img3, img4, img5, img6, img8
-                 
+  const images = [ img3, img4, img5, img6, img8,img1,  img9, img10, img11, img12,img13,img14
+  
   ];
   useEffect(() => {
     setTimeout(() => setAnimate(true), 100); 

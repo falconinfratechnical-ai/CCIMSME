@@ -12,7 +12,14 @@ import meeting3 from "../assets/event2.jpg";
 // import meeting4 from "../assets/event3.jpg";
 import gallery from "../assets/gallery.jpg"
 import gallery1 from "../assets/gallery1.jpg"
-import events from "../assets/events.jpg";
+import events from "../assets/events.jpg"; 
+import img1 from "../assets/event3.jpg";
+import img2 from "../assets/event4.jpg";
+import img3 from "../assets/event5.jpg";
+import img4 from "../assets/event6.jpg";
+import img5 from "../assets/event7.jpg";
+import img6 from "../assets/event8.jpg";
+import img7 from "../assets/event9.jpg";
 
 const HomeSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,8 +35,12 @@ const HomeSection = () => {
 
   const images = [
     meeting2, meeting3, 
-    gallery1, yesLogo, gallery1, weLogo1,
-    gallery, events
+    gallery1, yesLogo ,
+    weLogo1 , events  ,
+    img1    ,img2     ,
+    img3    ,img4     ,
+    img5    ,img6     ,
+    img7
   ];
 
   useEffect(() => {
