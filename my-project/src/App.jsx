@@ -1,4 +1,4 @@
-// ...existing code...
+
 import React, {  useState } from "react";
 import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
 import Header from "./components/Header";
@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 import Membership from "./components/Membership";
 import Contact from "./components/Contact"; 
 import Gallery from "./components/Gallery";
-// import Splash from "./components/Splash";
+;
 import Activity from "./components/Activity";
 import MembershipForm from "./components/Membership-form";
 import PaymentOptions from "./components/PaymentOption";

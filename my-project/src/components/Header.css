@@ -9,7 +9,7 @@
   z-index: 2000;
   font-family: "Poppins", sans-serif;
   flex-wrap: wrap;
-  gap: 20px;      /* FIXED */
+  gap: 20px;    
 }
 
 
@@ -131,11 +131,11 @@
 }
 
 
-/* SMALL MOBILE (FULL RESPONSIVE) */
+
 @media (max-width: 600px) {
 
   .logo {
-    height: 65px;    /* smaller logo */
+    height: 65px;   
   }
 
   .logo-tagline {

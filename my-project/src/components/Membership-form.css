@@ -63,7 +63,7 @@
   box-shadow: 0 0 6px rgba(0, 186, 255, 0.3);
 }
 
-/* Remove Autofill Gray Background */
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
