@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import { contactSchema } from "../models/CommentSchema.js";
-import { sendEmail } from "../utils/Sendemail.js";
+import { sendEmail } from "../utils/SendEmail.js";
 
 const Contact = mongoose.model("Contact", contactSchema, "contact");
 const router = express.Router();

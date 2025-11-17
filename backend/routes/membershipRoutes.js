@@ -1,7 +1,7 @@
 import express from "express";
 import { membershipSchema } from "../models/MemberhsipSchema.js";
 import mongoose from "mongoose";
-import { sendEmail } from "../utils/Sendemail.js";
+import { sendEmail } from "../utils/SendEmail.js";
 
 const Membership = mongoose.model("Membership", membershipSchema, "membership");
 const router = express.Router();
