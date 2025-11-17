@@ -4,13 +4,18 @@ import "./AboutUs.css";
 import event2 from "../assets/event2.jpg";
 import event1 from "../assets/event1.jpg";
 import events from "../assets/events.jpg";
-import event3 from "../assets/event3.jpg";
+import event3 from "../assets/event4.jpg";
 import banner from "../assets/theme.jpg";
 import meeting1 from "../assets/events.jpg";
-import meeting2 from "../assets/gallery1.jpg";
+import meeting2 from "../assets/event10.jpg";
 import meeting3 from "../assets/we.jpg";
 import meeting4 from "../assets/gallery.jpg";
 import meeting5 from "../assets/download.jpg";
+import meeting6 from "../assets/event6.jpg";
+import meeting7 from "../assets/event7.jpg";
+import meeting8 from "../assets/event8.jpg";
+import meeting9 from "../assets/event10.jpg";
+
 
 const AboutUs = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -63,10 +68,10 @@ const AboutUs = () => {
     meeting3,
     meeting4,
     meeting5,
-    meeting4,
-    meeting1,
-    meeting2,
-    meeting1,
+    meeting6,
+    meeting7,
+    meeting8,
+    meeting9,
    event3,
    event2,
    event1,

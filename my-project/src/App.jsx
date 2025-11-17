@@ -8,7 +8,6 @@ import Footer from "./components/Footer";
 import Membership from "./components/Membership";
 import Contact from "./components/Contact"; 
 import Gallery from "./components/Gallery";
-;
 import Activity from "./components/Activity";
 import MembershipForm from "./components/Membership-form";
 import PaymentOptions from "./components/PaymentOption";
@@ -20,10 +19,6 @@ function App() {
   // if (showSplash) {
   //   return <Splash onEnter={() => setShowSplash(false)} />;
   // }
-
-
-
-  
   return (
     <Router>
       <Header />
@@ -31,7 +26,7 @@ function App() {
         <Route path="/" element={<HomeSection />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/membership" element={<Membership />} />
-           <Route path="/membership-form" element={<MembershipForm />} />
+       <Route path="/membership-form" element={<MembershipForm />} />
             <Route path="/payment-options" element={<PaymentOptions />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/gallery" element={<Gallery/>} /> 

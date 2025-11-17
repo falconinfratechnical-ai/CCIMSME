@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./Membership-form.css";
 
@@ -25,12 +25,15 @@ const MembershipForm = () => {
 const handleSubmit = async (e) => {
     e.preventDefault();
     
-    try {
-        const response = await fetch("http://localhost:5000/api/membership", {
-            method: "POST", 
-            headers: { 'Content-Type': "application/json" },
-            body: JSON.stringify(formData)
-        });
+   
+  try {
+    const API_URL = import.meta.env.VITE_API_URL;
+
+    const response = await fetch(`${API_URL}/api/membership`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
 
         if (!response.ok) {
             throw new Error("Network error");

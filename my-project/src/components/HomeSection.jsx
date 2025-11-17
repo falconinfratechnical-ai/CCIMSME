@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../components/HomeSection.css";
 // import banner from "../assets/download.jpg";
 import apj from "../assets/sir.png";
-import yesLogo from "../assets/yes.jpg";
+import forum1 from "../assets/yes.jpg";
 import chaatLogo from "../assets/chaat.jpg";
 import weLogo from "../assets/yes.jpg";
 import weLogo1 from "../assets/we1.jpg";
@@ -19,7 +19,8 @@ import img3 from "../assets/event5.jpg";
 import img4 from "../assets/event6.jpg";
 import img5 from "../assets/event7.jpg";
 import img6 from "../assets/event8.jpg";
-import img7 from "../assets/event9.jpg";
+import img7 from "../assets/event10.jpg";
+
 
 const HomeSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -35,12 +36,12 @@ const HomeSection = () => {
 
   const images = [
     meeting2, meeting3, 
-    gallery1, yesLogo ,
+   forum1 ,img7,
     weLogo1 , events  ,
     img1    ,img2     ,
     img3    ,img4     ,
     img5    ,img6     ,
-    img7
+
   ];
 
   useEffect(() => {
@@ -67,7 +68,6 @@ const HomeSection = () => {
         <div className="hero-section">
           <img src={gallery1} alt="Banner" className="hero-image" />
         </div>
-
         {/* INFO SECTION */}
         <div className="info-section">
           <div className="info-left">
@@ -180,7 +180,7 @@ const HomeSection = () => {
           <h2>Connecting Businesses, Empowering Communities</h2>
           <div className="forums-container">
             <div className="forum-card">
-              <img src={yesLogo} alt="YES" />
+              <img src={forum1} alt="YES" />
               <h3>Guided Inception</h3>
               <p>
                 We assist aspiring entrepreneurs in identifying viable industries,

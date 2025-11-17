@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import { FaFacebookF, FaYoutube, FaLinkedinIn, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import AboutDropdown from "./AboutDropdown";
+// import AboutDropdown from "./AboutDropdown";
 
 const Footer = () => {
   return (
@@ -30,8 +30,9 @@ rel="noopener noreferrer"><FaYoutube /></a>
         <div className="footer-column">
           <h3>QUICK LINKS</h3>
           <ul>
-            <li><a href="/">Welcome</a></li>
-              <li><AboutDropdown /></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+              {/* <li><AboutDropdown /></li> */}
             <li><a  href="/activity">Our Activities</a></li>
             <li><a href="/gallery">Gallery</a></li>
             <li><a href="/contact">Contact Us</a></li>

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import meeting1 from "../assets/download.jpg";
 import meeting2 from "../assets/event1.jpg";
 import meeting3 from "../assets/event2.jpg";
-import meeting4 from "../assets/event3.jpg";
+import meeting4 from "../assets/event4.jpg";
 
 function Activity() {
   const [animate, setAnimate] = useState(false);
