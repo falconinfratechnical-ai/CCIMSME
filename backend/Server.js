@@ -14,8 +14,7 @@ const app = express();
 // Middleware
 app.use(cors({
   origin: [
-   "https://ccimsme.com",
-    "https://yourcustomdomain.com"
+   " https://ccimsme.com",
   ],
   methods: "GET,POST,PUT,DELETE",
   credentials: true
