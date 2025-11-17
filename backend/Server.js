@@ -14,7 +14,7 @@ const app = express();
 // Middleware
 app.use(cors({
   origin: [
-    "https://ccimsme.vercel.app",
+   "https://ccimsme.com",
     "https://yourcustomdomain.com"
   ],
   methods: "GET,POST,PUT,DELETE",
