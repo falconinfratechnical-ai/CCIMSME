@@ -14,9 +14,11 @@ const app = express();
 // Middleware
 app.use(cors({
   origin: [
-   " https://ccimsme.com",
+    "https://ccimsme.com",  
+    "http://localhost:3000", 
+    "http://localhost:5173", 
   ],
-  methods: "GET,POST,PUT,DELETE",
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
 app.use(express.json());
@@ -30,4 +32,4 @@ app.use("/api/membership", membershipRoutes);
 
 // Start server
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
