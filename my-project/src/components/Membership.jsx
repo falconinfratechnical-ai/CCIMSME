@@ -81,7 +81,7 @@ const membership = () => {
         "✔️ Two tickets to attend 3 Chamber signature events of  your choice .",
         "✔️ Two tickets to attend the Annual Awards Banquet.",
         "✔️ B2B and B2C referrals.",
-        "✔️ Special invitation to member-only opportunities, meetings, and events.",
+        "🚫  Special invitation to member-only opportunities, meetings, and events.",
         "🚫 Ribbon cutting and letters of support.",
         "🚫 Discounted pricing for other Chamber-hosted or co-sponsored events.",
         "🚫 Other discounts on products/services for Chamber Members.",
