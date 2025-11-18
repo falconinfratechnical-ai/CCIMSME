@@ -21,7 +21,7 @@ router.post("/", async (req, res) => {
     const saved = await Membership.create(req.body);
 
     // Send email
-    await SendEmail(
+ SendEmail(
       "New Membership Application",
       `
         <h2>New Membership Form Submission</h2>

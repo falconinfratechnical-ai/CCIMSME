@@ -14,7 +14,7 @@ router.post("/", async (req, res) => {
     const saved = await Contact.create(req.body);
 
     // Send email (non-blocking)
-    sendEmail(
+    SendEmail(
       "New Contact Form Submission",
       `
         <h2>New Contact Form Submission</h2>

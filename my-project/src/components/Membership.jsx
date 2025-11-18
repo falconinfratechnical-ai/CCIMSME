@@ -4,7 +4,7 @@ import "./Membership.css"
 import banner from "../assets/theme.jpg";
 import { useNavigate } from "react-router-dom"
 
-const membership = () => {
+const Membership = () => {
   const [animate, setAnimate] = useState(false);
   const navigate = useNavigate();
   const handleBuy = (plan) => {
@@ -138,4 +138,4 @@ const membership = () => {
     </>
   )
 }
-export default membership;
+export default Membership;
