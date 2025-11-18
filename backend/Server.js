@@ -1,28 +1,42 @@
 import express from "express";
-import cors from "cors";
 import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import contactRoutes from "./routes/contactRoutes.js";
 import membershipRoutes from "./routes/membershipRoutes.js";
 
-// Load environment variables
+
 dotenv.config();
 
-// Initialize app
+
 const app = express();
 
-// Middleware
-app.use(cors({
-  origin: [
+const allowedOrigins = [
   "https://ccimsme.com",
   "https://www.ccimsme.com",
   "http://localhost:3000",
-  "http://localhost:5173",
+  "http://localhost:5173"
+];
 
-  ],
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
-}));
+app.use((req, res, next) => {
+  const origin = req.headers.origin;
+
+  if (allowedOrigins.includes(origin)) {
+    res.header("Access-Control-Allow-Origin", origin);
+  }
+
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.header("Access-Control-Allow-Credentials", "true");
+
+  // Handle preflight OPTIONS request
+  if (req.method === "OPTIONS") {
+    return res.sendStatus(200);
+  }
+
+  next();
+});
+
+
 app.use(express.json());
 
 // Connect to MongoDB
