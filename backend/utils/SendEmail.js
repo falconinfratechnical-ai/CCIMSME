@@ -9,12 +9,12 @@ export const SendEmail = async (subject, html) => {
       throw new Error("RESEND_API_KEY is not defined in environment variables");
     }
 
-    const response = await resend.emails.send({
-      from: "CCIMSME <onboarding@resend.dev>",
-      to: process.env.EMAIL_TO,
-      subject,
-      html,
-    });
+const response = await resend.emails.send({
+  from: "CCIMSME <onboarding@resend.dev>",
+  to: process.env.EMAIL_TO,
+  subject,
+  html,
+});
 
     console.log("✅ Email sent successfully:", response.id);
     return response;

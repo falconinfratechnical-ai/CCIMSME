@@ -90,8 +90,8 @@ const Contact = () => {
               </p>
               <p>
                 📧{" "}
-                <a href="mailto:info@ccimsme.com?subject=Website%20Contact">
-                 info@ccimsme.com
+                <a href="mailto:ccimsme@gmail.com?subject=Website%20Contact">
+                ccimsme@gmail.com
                </a>
               </p>
               <div className="social-icons">

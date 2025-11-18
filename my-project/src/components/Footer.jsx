@@ -47,7 +47,7 @@ rel="noopener noreferrer"><FaYoutube /></a>
                 ISC,Falcon Infrastructure ltd, Door No. XVI/128,puthiya
                 road jn.Eloor udhyogamandal 
                 P.O., Cochin-683501, <br/>Phone:+91 9497715888</p>
-          <p><FaEnvelope />  info@ccimsme.com</p>
+          <p><FaEnvelope />  ccimsme@gmail.com</p>
         </div>
 
         {/* CENTENARY CELEBRATIONS */}
@@ -61,6 +61,8 @@ rel="noopener noreferrer"><FaYoutube /></a>
         </div> */}
 
       </div>
+
+      <div className="copyright"> <h3> © Wondermill Studio LLP</h3></div>
     </footer>
   );
 };
