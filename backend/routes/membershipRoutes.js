@@ -1,7 +1,7 @@
 import express from "express";
 import { membershipSchema } from "../models/MemberhsipSchema.js";
 import mongoose from "mongoose";
-import { sendEmail } from "../utils/SendEmail.js";
+import { SendEmail } from "../utils/SendEmail.js";
 
 const Membership = mongoose.model("Membership", membershipSchema, "membership");
 const router = express.Router();
@@ -21,7 +21,7 @@ router.post("/", async (req, res) => {
     const saved = await Membership.create(req.body);
 
     // Send email
-    await sendEmail(
+   sendEmail(
       "New Membership Application",
       `
         <h2>New Membership Form Submission</h2>
@@ -32,9 +32,9 @@ router.post("/", async (req, res) => {
         <p><strong>Firm Address:</strong> ${businessAddress}</p>
         <p><strong>Phone:</strong> ${phone}</p>
       `
-    );
+    ).catch(err => console.error("Email send failed:", err));
 
-    res.json({ success: true, data: saved });
+    res.json({ success: true, data: saved, message: "Membership form submitted successfully" });
 
   } catch (err) {
     console.error("Membership error:", err);

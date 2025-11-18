@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 
-export const sendEmail = async (subject, html) => {
+export const SendEmail = async (subject, html) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -9,7 +9,7 @@ export const sendEmail = async (subject, html) => {
     },
   });
 
-  return transporter.sendMail({
+  return transporter.SendMail({
     from: `"CCIMSME Website" <${process.env.EMAIL_USER}>`,
     to: process.env.EMAIL_TO,  
     subject,
