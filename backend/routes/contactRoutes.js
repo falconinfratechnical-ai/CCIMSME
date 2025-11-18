@@ -13,8 +13,8 @@ router.post("/", async (req, res) => {
     // Save to DB
     const saved = await Contact.create(req.body);
 
-    // Send email
-    await SendEmail(
+    // Send email (non-blocking)
+    sendEmail(
       "New Contact Form Submission",
       `
         <h2>New Contact Form Submission</h2>
