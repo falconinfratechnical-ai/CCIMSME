@@ -9,7 +9,7 @@ export const SendEmail = async (subject, html) => {
     },
   });
 
-  return transporter.SendMail({
+  return transporter.sendMail({
     from: `"CCIMSME Website" <${process.env.EMAIL_USER}>`,
     to: process.env.EMAIL_TO,  
     subject,

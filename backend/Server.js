@@ -14,9 +14,11 @@ const app = express();
 // Middleware
 app.use(cors({
   origin: [
-    "https://ccimsme.com",  
-    "http://localhost:3000", 
-    "http://localhost:5173", 
+  "https://ccimsme.com",
+  "https://www.ccimsme.com",
+  "http://localhost:3000",
+  "http://localhost:5173",
+
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
