@@ -9,20 +9,31 @@ dotenv.config();
 
 const app = express();
 
-// CORS Configuration
+// ✅ CORS Configuration - MUST be before routes
+const allowedOrigins = [
+  "https://ccimsme.com",
+  "https://www.ccimsme.com",
+  "http://localhost:3000",
+  "http://localhost:5173"
+];
+
 app.use(cors({
-  origin: [
-    "https://ccimsme.com",
-    "https://www.ccimsme.com",
-    "http://localhost:3000",
-    "http://localhost:5173"
-  ],
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true,
-  allowedHeaders: ["Content-Type", "Authorization"]
+  allowedHeaders: ["Content-Type", "Authorization"],
+  maxAge: 3600
 }));
 
+// ✅ Body parser middleware
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Connect to MongoDB
 connectDB();
@@ -31,6 +42,20 @@ connectDB();
 app.use("/api/contact", contactRoutes);
 app.use("/api/membership", membershipRoutes);
 
+// Health check endpoint
+app.get("/health", (req, res) => {
+  res.json({ status: "✅ Server is running" });
+});
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error("Server error:", err);
+  res.status(500).json({ success: false, error: err.message });
+});
+
 // Start server
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
+app.listen(PORT, () => {
+  console.log(`✅ Server running on port ${PORT}`);
+  console.log(`✅ CORS enabled for: ${allowedOrigins.join(", ")}`);
+});

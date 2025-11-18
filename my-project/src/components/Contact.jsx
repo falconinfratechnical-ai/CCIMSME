@@ -1,9 +1,10 @@
-import React, { useState ,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./Contact.css";
 import banner from "../assets/theme.jpg";
 
 const Contact = () => {
-    const [animate, setAnimate] = useState(false);
+  const [animate, setAnimate] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -21,19 +22,32 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     try {
- const API_URL = import.meta.env.VITE_API_URL;
+      const API_URL = import.meta.env.VITE_API_URL;
 
+      if (!API_URL) {
+        alert("API URL not configured");
+        setLoading(false);
+        return;
+      }
 
-        const response = await fetch(`${API_URL}/api/contact`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
+      console.log("Submitting to:", `${API_URL}/api/contact`);
+      console.log("Data:", formData);
 
-      if (response.ok) {
-        alert("Your message has been sent successfully!");
+      const response = await fetch(`${API_URL}/api/contact`, {
+        method: "POST",
+        headers: { 
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        alert("✅ Your message has been sent successfully!");
         setFormData({
           firstName: "",
           lastName: "",
@@ -42,57 +56,59 @@ const Contact = () => {
           message: "",
         });
       } else {
-        alert("Something went wrong. Please try again.");
+        alert("❌ " + (data.message || "Something went wrong. Please try again."));
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("Error submitting form.");
+      alert("❌ Network error. Please check your connection and try again.");
+    } finally {
+      setLoading(false);
     }
   };
-  useEffect(() => {
-      setTimeout(() => setAnimate(true), 100); 
-    }, []);
 
-    useEffect(() => {
-  window.scrollTo(0, 0);
-}, []);
+  useEffect(() => {
+    setTimeout(() => setAnimate(true), 100);
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
-     <div className={`activity-wrapper ${animate ? "page-enter" : ""}`}>
-       
-          <section
-            className="about-hero1"
-            style={{ backgroundImage: `url(${banner})` }}
-          >
-            <div className="hero-overlay">
-              <h1>Contact Us</h1>
-            </div>
-          </section>
+    <div className={`activity-wrapper ${animate ? "page-enter" : ""}`}>
+      <section
+        className="about-hero1"
+        style={{ backgroundImage: `url(${banner})` }}
+      >
+        <div className="hero-overlay">
+          <h1>Contact Us</h1>
+        </div>
+      </section>
 
       <div className="contact-container">
-        
         <h2 className="contact-title">Have Any Question?</h2>
 
         <div className="contact-content">
-          
-  <div className="contact-left">
+          <div className="contact-left">
             <div className="contact-block">
-              <h3></h3>
+              <h3>Head Office</h3>
               <p>
                 Chamber of commerce and industry for MSME (CCIMSME), <br />
-                ISC,Falcon Infrastructure ltd, Door No. XVI/128,puthiya<br/>
-                road jn.Eloor udhyogamandal 
+                ISC, Falcon Infrastructure ltd, Door No. XVI/128, puthiya<br />
+                road jn. Eloor udhyogamandal
                 P.O., Cochin-683501,
               </p>
               <p>
-                📞 <a  href="tel:+914522626751"> +91 9497715888</a> 
-               
+                📞{" "}
+                <a href="tel:+919497715888">
+                  +91 9497715888
+                </a>
               </p>
               <p>
                 📧{" "}
                 <a href="mailto:ccimsme@gmail.com?subject=Website%20Contact">
-                ccimsme@gmail.com
-               </a>
+                  ccimsme@gmail.com
+                </a>
               </p>
               <div className="social-icons">
                 <i className="fab fa-facebook"></i>
@@ -104,16 +120,20 @@ const Contact = () => {
             <div className="contact-block">
               <h3>Chairman</h3>
               <p>
-               NA Muhammed Kutty<br />
-               CCIMSME 
+                NA Muhammed Kutty<br />
+                CCIMSME
               </p>
               <p>
-                📞 <a href="tel:+914435669124"> 9497715888</a>
+                📞{" "}
+                <a href="tel:+919497715888">
+                  +91 9497715888
+                </a>
               </p>
               <p>
                 📧{" "}
-               <a href="mailto:chairman@ccimsme.com?subject=Website%20Enquiry">                  chairman@ccimsme.com
-           </a>
+                <a href="mailto:chairman@ccimsme.com?subject=Website%20Enquiry">
+                  chairman@ccimsme.com
+                </a>
               </p>
               <div className="social-icons">
                 <i className="fab fa-facebook"></i>
@@ -122,11 +142,12 @@ const Contact = () => {
               </div>
             </div>
           </div>
+
           <div className="contact-right">
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="form-group">
-                  <label>First Name</label>
+                  <label>First Name *</label>
                   <input
                     type="text"
                     name="firstName"
@@ -134,8 +155,9 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="First Name"
                     required
+                    disabled={loading}
                   />
-                </div>  <br/>
+                </div>
                 <div className="form-group">
                   <label>Last Name</label>
                   <input
@@ -144,6 +166,7 @@ const Contact = () => {
                     value={formData.lastName}
                     onChange={handleChange}
                     placeholder="Last Name"
+                    disabled={loading}
                   />
                 </div>
               </div>
@@ -157,6 +180,7 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder="Email"
                   required
+                  disabled={loading}
                 />
               </div>
 
@@ -168,21 +192,24 @@ const Contact = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="Phone"
+                  disabled={loading}
                 />
               </div>
 
               <div className="form-group">
-                <label>Message</label>
+                <label>Message *</label>
                 <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Message"
+                  required
+                  disabled={loading}
                 ></textarea>
               </div>
 
-              <button type="submit" className="submit-btn">
-                Submit
+              <button type="submit" className="submit-btn" disabled={loading}>
+                {loading ? "Sending..." : "Submit"}
               </button>
             </form>
           </div>
