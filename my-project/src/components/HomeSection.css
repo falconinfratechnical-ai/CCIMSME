@@ -82,18 +82,31 @@ width: 100%;
   align-items: center;
 }
 
+
 .info-left img {
- width: 100%; height: auto;
+  width: 100%;
+  height: auto;
   margin-top: 80px;
   max-width: 750px;
-  object-fit:cover;
+  object-fit: cover;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+
+  /* Smooth movement */
+  animation: smoothMove 6s ease-in-out infinite alternate;
+
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-.info-left img:hover {
-  transform: translateY(-10px) scale(1.02);
+/* Keyframes */
+@keyframes smoothMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-20px); 
+  }
 }
+
 
 .info-right {
   flex: 1;

@@ -4,7 +4,7 @@ import "../components/HomeSection.css";
 import apj from "../assets/sir.png";
 import forum1 from "../assets/yes.jpg";
 import chaatLogo from "../assets/chaat.jpg";
-import weLogo from "../assets/yes.jpg";
+import weLogo from "../assets/event5.jpg";
 import weLogo1 from "../assets/we1.jpg";
 import meeting1 from "../assets/download.jpg";
 import meeting2 from "../assets/event1.jpg";
@@ -26,6 +26,9 @@ const HomeSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedImage, setSelectedImage] = useState(null);
   const [animate, setAnimate] = useState(false);
+  const [whoIndex, setWhoIndex] = useState(0);
+    const [revival, setRevival] = useState(0);
+
 
   const galleryImages = [
     { thumbnail: meeting1, large: meeting1, alt: "Business Event 1" },
@@ -43,6 +46,9 @@ const HomeSection = () => {
     img5    ,img6     ,
 
   ];
+  
+const whoImages = [gallery, img7, img4];
+const revivalImg =[meeting1, meeting2, forum1 ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -60,6 +66,21 @@ const HomeSection = () => {
     window.scrollTo(0, 0);
   }, []); 
 
+useEffect(() => {
+  const interval = setInterval(() => {
+    setWhoIndex((prev) => (prev + 1) % whoImages.length);
+  }, 3000);
+
+  return () => clearInterval(interval);
+}, []);
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setRevival((prev) => (prev + 1) % revivalImg.length);
+  }, 2000);
+
+  return () => clearInterval(interval);
+}, []);
 
   return (
     <>
@@ -71,7 +92,8 @@ const HomeSection = () => {
         {/* INFO SECTION */}
         <div className="info-section">
           <div className="info-left">
-            <img src={gallery} alt="Who We Are" className="info-image" />
+           <img src={whoImages[whoIndex]} alt="Who We Are" className={`info-image fade-in`} />
+
           </div>
           <div className="info-right">
             <h3>Welcome to CCIMSME
@@ -85,7 +107,7 @@ const HomeSection = () => {
               and commercial sectors in Kerala. The Chamber is a grouping of individuals involved in Kerala’s varied industrial and commercial aspects. The aim of the
               Chamber is to assist those involved in these sectors in Kerala and to be a hand-holding to the new entrants in to this field and to lead them forward.
               Dynamic industrial expansion is an indispensable requirement for Kerala’s comprehensive growth. It can be seen that small scale industries are suited
-              for Kerala’s unique landscape. Small scale industries are the backbone of the nation’s economy. Keeping in account the changing circumstances, as per
+              for Kerala's unique landscape. Small scale industries are the backbone of the nation’s economy. Keeping in account the changing circumstances, as per
               the MSME law of 2020, business or industries having an investment of Rs.1 crore to Rs.50 crores or having a turnover of Rs.5 crore to Rs.250 crores
               are listed as small-scale industries. Accordingly, there has been proclamation of 11 financial and technical schemes have been declared. In this
               context, groupings like the Chamber are inevitable for the comprehensive growth and progress of the small-scale industrial sector.
@@ -96,18 +118,15 @@ const HomeSection = () => {
         <section >
           <div className="info-section">
             <div className="info-left">
-              <img src={events} alt="info-image" />
+              <img src={revivalImg[revival]} alt="Who We Are" className={`info-image fade-in`} />
             </div>
 
             <div className="info-right">
               <h2 >Revival, Vision & Innovation</h2>
-
               <h3>Why Partner with the MSME Chamber?</h3>
               <p>We see businesses struggling through no fault of their own and new entrepreneurs hesitant to begin. Our Chamber acts as a reliable partner for both. For established firms, we provide a lifeline by connecting them with financial help and technical support for revival. For newcomers, we offer clear guidance on viable industries and simplify access to funds and technology. We also open doors to new markets, both locally and for international exports. Through this dedicated support, we turn challenges into growth opportunities. Our goal is to ensure that every enterprise in Kerala thrives.</p>
-
               <h3>Our Vision</h3>
               <p>To be the leading catalyst for the sustainable and comprehensive growth of MSMEs in Kerala, elevating them to international standards and contributing significantly to the state's economic prosperity.</p>
-
               <h3>Our Mission</h3>
               <p>To handhold entrepreneurs at every stage of their journey, from conception to global expansion, by providing integrated support, advocacy, and access to essential resources, thereby creating a thriving industrial environment in Kerala.</p>
             </div>
@@ -147,7 +166,6 @@ const HomeSection = () => {
             <h3 className="lead-small">The Chamber is guided by the visionary leadership of
               <br /> Shri. N. A. Muhammed Kutty (Mammuty)
               Chairman, CCIMSME
-
             </h3>
             <p>
               The Chamber is honoured to be guided by the sagacious leadership of Shri. N. A. Muhammed Kutty (Mammutty), a name synonymous with progressive reform and entrepreneurial success. As a stalwart in industry and commerce, he brings a wealth of experience and an unwavering commitment to the comprehensive development of our state's industrial segment.
@@ -158,22 +176,18 @@ const HomeSection = () => {
               Managing Director:
               Falcon Infrastructures Ltd.
             </p>
-
             <p>
               "To lead entrepreneurs through a well-trodden path. To make the comprehensive development of Kerala possible and take enterprises to the level of international exports."</p>
-
             <button className="read-more">
               <a href="https://mammuty.me/" target="_blank" rel="noopener noreferrer">
                 READ MORE
               </a>
             </button>
-
           </div>
           <div className="info-right1">
             <img src={apj} alt="Our Mission" className="info-image1" />
           </div>
         </div>
-
         {/* FORUMS SECTION */}
         <div className="forums-section">
           <h3>Our Forums</h3>
@@ -204,22 +218,16 @@ const HomeSection = () => {
             </div>
           </div>
         </div>
-
         {/* GROWTH SECTION */}
         <div className="growth-section">
           <div className="growth-text">
             <h1>Growth of Trade & Industry - Our Objectives</h1>
 
             <p>It is indisputable that the Chamber will be able to present the requirements of the existing industries and business community to the government and achieve favourable results. Not only that, there is no doubt that the collective has a significant role as the representative that will able to exert major influence on legislations that effect the business community, without direct involvement.</p>
-
             <p>The Chamber will be able to become a representative of the business community in the economic development activities of Kerala. Especially since about 90% of the enterprises fall under the MSME sector. The Chamber enables the dissemination of directives of national and international Chambers of Commerce and in implementing them.</p>
-
             <p>The Chamber has opportunities to represent the business community in the government's educational-cultural-industrial initiatives and involve in it as a representative which can resolve issues in these areas as an intermediary to inform the business community of the new opportunities and governments policies regarding industry and commerce.</p>
-
             <p>Not only that, the Chamber is ever willing to play a role in enabling appropriate technical and technological help for their products and facilitate marketing. Through this there is no doubt that it can lead to the growth of industries. By understanding the requirements of the coming age, numerous developments including automation will have to be undertaken.</p>
-
             <p>There will be many apprehensions and reservations before new entrants into the field of industry. It is also the task of the Chamber to mitigate such doubts. The Chamber will be a facilitator that will assist new entrepreneurs in finding answers to questions like what are the industries that are possible in Kerala, the access to financial and technical help and the extend of market possibilities. The Chamber will also reveal the opportunities of exports abroad.</p>
-
             <p>The Chamber members will also be able to explore the vast possibilities of business expansion through trade exhibitions in keeping with the times for existing and new enterprises. The Chamber aims at the growth of its region and that of itself through such efforts.</p>
           </div>
 

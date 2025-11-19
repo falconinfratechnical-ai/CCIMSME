@@ -31,29 +31,24 @@ app.use(cors({
   maxAge: 3600
 }));
 
-// ✅ Body parser middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Connect to MongoDB
 connectDB();
 
-// Routes
 app.use("/api/contact", contactRoutes);
 app.use("/api/membership", membershipRoutes);
 
-// Health check endpoint
 app.get("/health", (req, res) => {
   res.json({ status: "✅ Server is running" });
 });
 
-// Error handling middleware
 app.use((err, req, res, next) => {
   console.error("Server error:", err);
   res.status(500).json({ success: false, error: err.message });
 });
 
-// Start server
+//  server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`✅ Server running on port ${PORT}`);

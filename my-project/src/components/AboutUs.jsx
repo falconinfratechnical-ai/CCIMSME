@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./AboutUs.css";
-
+// imgs
 import event2 from "../assets/event2.jpg";
 import event1 from "../assets/event1.jpg";
 import events from "../assets/events.jpg";

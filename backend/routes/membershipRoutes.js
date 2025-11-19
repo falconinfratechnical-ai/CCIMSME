@@ -17,7 +17,6 @@ router.post("/", async (req, res) => {
       phone,
     } = req.body;
 
-    // Save to DB
     const saved = await Membership.create(req.body);
 
     // Send email

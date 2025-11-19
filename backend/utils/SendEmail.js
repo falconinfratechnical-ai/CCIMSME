@@ -2,7 +2,6 @@ import { Resend } from "resend";
 
 export const SendEmail = async (subject, html) => {
   try {
-    // Initialize Resend AFTER env vars are loaded
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     if (!process.env.RESEND_API_KEY) {
