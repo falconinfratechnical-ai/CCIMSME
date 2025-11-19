@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "shining-lamp-478710-s9",
+  "private_key_id": "d0d36923cf9be721ac766fbac9cffe0d7fe60006",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCuSXbO7+Jx+4dV\nkSP3yuUQ6+UpCvAP9TZEY4n501oM2LszHZqvcJpHdeb6dVG2Uqgv3UvQfZEnZbAi\n0e32e+qeEemPmd3iH17yFhXNe23BcM3wraDDgfUr+DIcYTWa4nURuDeSoOzRTlP5\noqJ1aLhRTWV6BPrvVQelXX70T+KW+0t9Wf/fV24Zx21Avc9+qnhT7CaM7J5NCriZ\nZovnPUhITTUdxf3c90fzmpyJN/4DHg1jYi+2Yw+vsW8Y2HRDC9jwzZNith+Ch/bS\ngfj4BLMZRAmCwFQQRCIyw4nJObt16c87bW4QcIMHrkITlXPahGoD0b2AhprAw8/5\n3ucjKIYXAgMBAAECggEAJ4Ojap5rhjEjSUybTYJUNeZtscT3kX6kW5P/w8LdzzzS\nEHA9UlpiuCHsiMtRh9csp5FyL2ZQoxCEgxh6baBBnK3t+K9HZY18PsGwFsLNqwZS\nwqby5HCR7/KZFeMaPq/qH+bWvqk6l+e81UPAtoLUCybTg3sek2WBUsYkUurLsjQO\naen4kY7DQ9V4t/OpvquHSbd6y44j0KXFDu9jWOReIFlz1drcSwmoRA3QL/Yhs0j4\n/swsILpxi7wQo7Pz1LWrfFcArXPOq/BBz/Dj+jaKpQgmoiTDC5+HY3hrgDaxWhSm\nt1nRarW2h2404+V6il1Uh3DucqRusqAQuExJ1JfkkQKBgQDWqr+BGRWHog7u+l9i\n1wz2cW8RPxnCXBN8epbw47m8ypev1khZ+ojXFG+ERZZTCCucYi61A2yAQ+LKopHz\nqoNuNI3KniTVMQAWAlRjRpWsMkhsIwCsv05pGESXfH4ojrkIJhM/sBiFpvd1PHDh\nSSsyjJk5PO8zAEboSQLfWFDncQKBgQDP2FNY+Ry/oaKesWPZJl2hfv53NVMqzY7s\n/eMLNsr32+QfVmHNyaOzIbBbw3DYnzCiTScyN7IT/PPge+HFcN8KviLN7/fYTwQ7\n88UkjBSaG3U5Y07rcUWdWOdApa8HpLYtn3gyy48KohhE0GrIV8DnXwF9D5q5gxZO\nz1iuc9BSBwKBgExfKwqu9e3vRgjXop/zinUTHkSwgmWXhIdAxfqlyirUmOrB/bOl\nYpHCf3o7l6OqwHk+pQdZVHy9qi4VcH+UJnZK1DdF1CzU5gbuhT9cmVtN+F4ghdjv\npuHU9HJApFGhlUrE4QxDhjXmlRtsiWxdL7UoOEsY1rD6ZD+32gHD1eTBAoGAQaEX\nQGL41vHc/asZ0jmxGwuUomOuLTfXR7IrfSECGh3O/K40F9zx2eBrZa5i9aPeoYEn\nPU4k5vbasymq8sNfSm8bYlfBtQXOWnfw6kdpQfglncdj5ihQSQ0HiHxItmsmM2XF\neJSaSEtCyofdEAHVobl4KNtCig2Af8YtRHjBcQUCgYA6bISXB+tSx5SyUt2Fid8S\nxUotOSq0CW8oLQhfRg0z/4wSAoa1r2R0BJxI+6x+DV2wLxh7Z8mPi33gSXfrE1A5\nF77btY4c8omXkw3p73oRsOhzCgy46pLYDtwMVv6ce25xRZRB939sZpWCG74381VL\nT9hlBCJvQrz4TxJKCJCfpQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "ccimsme-2025@shining-lamp-478710-s9.iam.gserviceaccount.com",
+  "client_id": "104085451205787199918",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/ccimsme-2025%40shining-lamp-478710-s9.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
