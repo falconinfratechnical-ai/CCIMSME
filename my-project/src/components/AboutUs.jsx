@@ -62,6 +62,7 @@ const AboutUs = () => {
     },
   ];
 
+  //Chamber Events & Highlights
   const images = [
     meeting1,
     meeting2,
@@ -72,9 +73,9 @@ const AboutUs = () => {
     meeting7,
     meeting8,
     meeting9,
-   event3,
-   event2,
-   event1,
+    event3,
+    event2,
+    event1,
   ];
 
   const IMAGES_PER_PAGE = 4;
@@ -98,9 +99,9 @@ const AboutUs = () => {
   useEffect(() => {
     setTimeout(() => setAnimate(true), 100);
   }, []);
-useEffect(() => {
-  window.scrollTo(0, 0);
-}, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className={`activity-wrapper ${animate ? "page-enter" : ""}`}>
@@ -117,6 +118,8 @@ useEffect(() => {
         <div className="about-content">
           <div className="about-images">
             <div className="image-collage">
+
+              {/* Our journey */}
               <img src={event2} alt="Event 1" className="img img-1" />
               <img src={event1} alt="Event 2" className="img img-2" />
               <img src={events} alt="Event 3" className="img img-3" />
@@ -125,7 +128,7 @@ useEffect(() => {
 
           <div className="about-text">
             <h2 className="vision">Our journey</h2>
-            
+
             <h3>Why Partner with the MSME Chamber?</h3>
             <p>
               The Chamber stands as the definitive representative of the MSME business community, eloquently presenting your requirements and aspirations to the government to secure favourable outcomes and shape conducive legislation. The Chamber serve as the harbinger of opportunity, decoding the directives of national and international commerce. In an economy where 90% of enterprises are MSMEs, we are the vital bridge connecting your ambition with Kerala's economic development.
@@ -162,7 +165,6 @@ useEffect(() => {
               <div
                 key={index}
                 className="gallery-card"
-                // onClick={() => setSelectedImage(img)}
               >
                 <img src={img} alt={`Event ${index}`} />
               </div>
@@ -200,34 +202,35 @@ useEffect(() => {
         )}
       </div>
 
-{/* Reversed About Section */}
-<section className="about-section-2 reverse">
-  <div className="about-content-2">
-    <div className="about-image-2">
-      <img src={events} alt="Chamber Event" />
-    </div>
+      {/* Reversed About Section */}
+      <section className="about-section-2 reverse">
+        <div className="about-content-2">
+          <div className="about-image-2">
+            {/* Revival-img */}
+            <img src={events} alt="Chamber Event" />
+          </div>
 
-    <div className="about-text-2">
-   
-      <h2 className="vision">Revival, Vision & Innovation</h2>
-      
-      <h3 className='head' >Why Partner with the MSME Chamber?</h3>
-      <p>
-        We see businesses struggling through no fault of their own and new entrepreneurs hesitant to begin. Our Chamber acts as a reliable partner for both. For established firms, we provide a lifeline by connecting them with financial help and technical support for revival. For newcomers, we offer clear guidance on viable industries and simplify access to funds and technology. We also open doors to new markets, both locally and for international exports. Through this dedicated support, we turn challenges into growth opportunities. Our goal is to ensure that every enterprise in Kerala thrives.
-      </p>
-      
-      <h3>Our Vision</h3>
-      <p>
-        To be the leading catalyst for the sustainable and comprehensive growth of MSMEs in Kerala, elevating them to international standards and contributing significantly to the state's economic prosperity.
-      </p>
+          <div className="about-text-2">
 
-      <h3>Our Mission</h3>
-      <p>
-        To handhold entrepreneurs at every stage of their journey, from conception to global expansion, by providing integrated support, advocacy, and access to essential resources, thereby creating a thriving industrial environment in Kerala.
-      </p>
-    </div>
-  </div>
-</section>
+            <h2 className="vision">Revival, Vision & Innovation</h2>
+
+            <h3 className='head' >Why Partner with the MSME Chamber?</h3>
+            <p>
+              We see businesses struggling through no fault of their own and new entrepreneurs hesitant to begin. Our Chamber acts as a reliable partner for both. For established firms, we provide a lifeline by connecting them with financial help and technical support for revival. For newcomers, we offer clear guidance on viable industries and simplify access to funds and technology. We also open doors to new markets, both locally and for international exports. Through this dedicated support, we turn challenges into growth opportunities. Our goal is to ensure that every enterprise in Kerala thrives.
+            </p>
+
+            <h3>Our Vision</h3>
+            <p>
+              To be the leading catalyst for the sustainable and comprehensive growth of MSMEs in Kerala, elevating them to international standards and contributing significantly to the state's economic prosperity.
+            </p>
+
+            <h3>Our Mission</h3>
+            <p>
+              To handhold entrepreneurs at every stage of their journey, from conception to global expansion, by providing integrated support, advocacy, and access to essential resources, thereby creating a thriving industrial environment in Kerala.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section
         className="highlights-section"
@@ -237,7 +240,7 @@ useEffect(() => {
           <div className="highlights-header">
             <h5>Chamber Activities – Our Vital Services</h5>
             <h2>We will be offering comprehensive suite of services designed to streamline your business operations and fuel your growth, including:
-</h2>
+            </h2>
           </div>
 
           <div className="highlights-grid">

@@ -14,67 +14,70 @@ import img11 from "../assets/event6.jpg";
 import img12 from "../assets/event7.jpg";
 import img13 from "../assets/event8.jpg";
 import img14 from "../assets/event10.jpg";
-// import img14 from "../assets/event10.jpg";
-// import img14 from "../assets/event10.jpg";
-// import img14 from "../assets/event10.jpg";
-// import img14 from "../assets/event10.jpg";
-// import img14 from "../assets/event10.jpg";
-// import img14 from "../assets/event10.jpg";
-
 
 const Gallery = () => {
   const [animate, setAnimate] = useState(false);
-  const images = [     img1,
-    img3,
-    img4,
-    img5,
-    img6,
-    img7,
-    img8,
-    img9,
-    img10,
-    img11,
-    img12,
-    img13,
-    img14,
-// img14,
-// img14,
-// img14,
-// img14,
-// img14,
-// img14,
-// img14,
-// img14
+  const [lightboxIndex, setLightboxIndex] = useState(null);
 
+  const images = [
+    img1, img3, img4, img5, img6, img7,
+    img8, img9, img10, img11, img12, img13, img14
   ];
+
   useEffect(() => {
-    setTimeout(() => setAnimate(true), 100); 
+    setTimeout(() => setAnimate(true), 100);
   }, []);
 
   useEffect(() => {
-  window.scrollTo(0, 0);
-}, []);
+    window.scrollTo(0, 0);
+  }, []);
+
+  const openLightbox = (index) => setLightboxIndex(index);
+  const closeLightbox = () => setLightboxIndex(null);
+
+  const nextImg = () =>
+    setLightboxIndex((lightboxIndex + 1) % images.length);
+
+  const prevImg = () =>
+    setLightboxIndex((lightboxIndex - 1 + images.length) % images.length);
+
   return (
     <>
       <div className={`activity-wrapper ${animate ? "page-enter" : ""}`}>
         <section
-          className="about-hero1 "
+          className="about-hero1"
           style={{ backgroundImage: `url(${banner})` }}
         >
           <div className="hero-overlay">
             <h1>Gallery</h1>
           </div>
         </section>
-        <div className="gallery-page">     
+
+        <div className="gallery-page">
           <div className="gallery-grid">
             {images.map((src, index) => (
-              <div className="gallery-item" key={index}>
+              <div
+                className="gallery-item"
+                key={index}
+                onClick={() => openLightbox(index)}
+              >
                 <img src={src} alt={`Gallery ${index + 1}`} />
               </div>
             ))}
           </div>
         </div>
       </div>
+
+      {lightboxIndex !== null && (
+        <div className="lightbox">
+          <span className="lightbox-close" onClick={closeLightbox}>×</span>
+          <span className="lightbox-arrow left" onClick={prevImg}>❮</span>
+          <div className="lightbox-content">
+            <img src={images[lightboxIndex]} alt="" />
+          </div>
+          <span className="lightbox-arrow right" onClick={nextImg}>❯</span>
+        </div>
+      )}
     </>
   );
 };
