@@ -8,7 +8,7 @@ const Membership = () => {
   const [animate, setAnimate] = useState(false);
   const navigate = useNavigate();
  const handleBuy = () => {
-  window.open("https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/viewform", "_blank");
+  window.open("https://docs.google.com/forms/d/e/1FAIpQLSf3IpAiWu1dJzKRT_7d3MTKWQJzS-_OAQ3zF5ScWoL_GmCwbw/viewform?usp=preview", "_blank");
 };
   const plans = [
    {

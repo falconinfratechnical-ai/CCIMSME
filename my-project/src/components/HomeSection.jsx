@@ -10,8 +10,8 @@ import meeting1 from "../assets/download.jpg";
 import meeting2 from "../assets/event1.jpg";
 import meeting3 from "../assets/event2.jpg";
 // import meeting4 from "../assets/event3.jpg";
-import gallery from "../assets/gallery.jpg"
-import gallery1 from "../assets/gallery1.jpg"
+import gallery from "../assets/gallery.jpg";
+import gallery1 from "../assets/gallery1.jpg";
 import events from "../assets/events.jpg"; 
 import img1 from "../assets/event3.jpg";
 import img2 from "../assets/event4.jpg";
@@ -19,7 +19,7 @@ import img3 from "../assets/event5.jpg";
 import img4 from "../assets/event6.jpg";
 import img5 from "../assets/event7.jpg";
 import img6 from "../assets/event8.jpg";
-import img7 from "../assets/event10.jpg";
+// import img7 from "../assets/event10.jpg";
 
 
 const HomeSection = () => {
@@ -29,25 +29,26 @@ const HomeSection = () => {
   const [whoIndex, setWhoIndex] = useState(0);
     const [revival, setRevival] = useState(0);
 
-
+//growth section
   const galleryImages = [
     { thumbnail: meeting1, large: meeting1, alt: "Business Event 1" },
     { thumbnail: weLogo , large: weLogo , alt: "Business Event 2" },
     { thumbnail: weLogo1, large: weLogo1, alt: "Business Event 3" },
     { thumbnail: meeting2, large: meeting2, alt: "Business Event 4" },
   ];
-
+//gallery section
   const images = [
     meeting2, meeting3, 
-   forum1 ,img7,
+   forum1 ,
     weLogo1 , events  ,
     img1    ,img2     ,
     img3    ,img4     ,
     img5    ,img6     ,
 
   ];
-  
-const whoImages = [gallery, img7, img4];
+  //who section
+const whoImages = [gallery, chaatLogo, img4];
+//rivival section
 const revivalImg =[meeting1, meeting2, forum1 ];
 
   useEffect(() => {
