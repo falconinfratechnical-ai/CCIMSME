@@ -9,7 +9,7 @@ dotenv.config();
 
 const app = express();
 
-// ✅ CORS Configuration - MUST be before routes
+//  CORS Configu
 const allowedOrigins = [
   "https://ccimsme.com",
   "https://www.ccimsme.com",

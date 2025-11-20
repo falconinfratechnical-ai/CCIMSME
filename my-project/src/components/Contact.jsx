@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Contact.css";
 import banner from "../assets/theme.jpg";
+import QR from "../assets/qr.jpeg"
 
 const Contact = () => {
   const [animate, setAnimate] = useState(false);
@@ -132,9 +133,12 @@ const Contact = () => {
               </p>
               <p>
                 📧{" "}
-                <a href="mailto:chairman@ccimsme.com?subject=Website%20Enquiry">
-                  chairman@ccimsme.com
-                </a>
+               <a 
+  href="mailto:ccimsme@gmail.com?subject=Website%20Contact"
+  rel="noopener noreferrer"
+>
+  ccimsme@gmail.com
+</a>
               </p>
               <div className="social-icons">
                 <i className="fab fa-facebook"></i>
@@ -145,75 +149,33 @@ const Contact = () => {
           </div>
 
           <div className="contact-right">
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <div className="form-row">
-                <div className="form-group">
-                  <label>First Name *</label>
-                  <input
-                    type="text"
-                    name="firstName"
-                    value={formData.firstName}
-                    onChange={handleChange}
-                    placeholder="First Name"
-                    required
-                    disabled={loading}
-                  />
-                </div>
-                <div className="form-group">
-                  <label>Last Name</label>
-                  <input
-                    type="text"
-                    name="lastName"
-                    value={formData.lastName}
-                    onChange={handleChange}
-                    placeholder="Last Name"
-                    disabled={loading}
-                  />
-                </div>
-              </div>
+            <h2 className="scan">Scan Me</h2>
+  <img 
+    src={QR}  
+    alt="Scan QR" 
+    className="qr-image"
+  />
 
-              <div className="form-group">
-                <label>Email *</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="Email"
-                  required
-                  disabled={loading}
-                />
-              </div>
+  <div className="contact-buttons">
+  <button 
+  className="email-btn" 
+  onClick={() => { 
+    console.log("Email button clicked!");
+    window.location.href = "mailto:ccimsme@gmail.com";
+  }}
+>
+  📧 Email Us
+</button>
 
-              <div className="form-group">
-                <label>Phone</label>
-                <input
-                  type="text"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  placeholder="Phone"
-                  disabled={loading}
-                />
-              </div>
+    <button 
+      className="wa-btn"
+      onClick={() => window.open("https://wa.me/919497715888", "_self")}
+    >
+      💬 WhatsApp
+    </button>
+  </div>
+</div>
 
-              <div className="form-group">
-                <label>Message *</label>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder="Message"
-                  required
-                  disabled={loading}
-                ></textarea>
-              </div>
-
-              <button type="submit" className="submit-btn" disabled={loading}>
-                {loading ? "Sending..." : "Submit"}
-              </button>
-            </form>
-          </div>
         </div>
       </div>
     </div>
