@@ -36,6 +36,7 @@ const Header = () => {
         <div className="logo-container">
           <img  src={logo} alt="Chamber Logo" className="logo" />
           <h3 className="logo-tagline">
+            
             New Impetus for Industrial Growth in Kerala
           </h3>
         </div>
