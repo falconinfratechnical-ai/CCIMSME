@@ -51,13 +51,14 @@
 .navbar a {
   text-decoration: none;
   color: #333;
-  font-weight: 500;
+   font-weight: bold;
+    /* font-size: 110%; */
   padding: 5px 0;
   transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-  color: #2e3ca9;
+  color: #bbbfdf;
 }
 
 
