@@ -7,8 +7,8 @@ import { useNavigate } from "react-router-dom"
 const Membership = () => {
   const [animate, setAnimate] = useState(false);
   const navigate = useNavigate();
-  const handleBuy = (plan) => {
-  navigate("/membership-form", { state: { plan } });
+ const handleBuy = () => {
+  window.open("https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/viewform", "_blank");
 };
   const plans = [
    {
@@ -35,7 +35,7 @@ const Membership = () => {
 
 
     {
-      "name": "Gold",
+      "name": "Executive",
       "price": "Rs.25,000",
       "gst": "  gst Included(18%) ",
       "features": [

@@ -6,74 +6,74 @@ import QR from "../assets/qr.jpeg"
 const Contact = () => {
   const [animate, setAnimate] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
+  // const [formData, setFormData] = useState({
+  //   firstName: "",
+  //   lastName: "",
+  //   email: "",
+  //   phone: "",
+  //   message: "",
+  // });
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+  // const handleChange = (e) => {
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.name]: e.target.value,
+  //   });
+  // };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-      console.log("VITE_API_URL = ", import.meta.env.VITE_API_URL);
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setLoading(true);
+  //     console.log("VITE_API_URL = ", import.meta.env.VITE_API_URL);
 
-    try {
-      const API_URL = import.meta.env.VITE_API_URL;
+  //   try {
+  //     const API_URL = import.meta.env.VITE_API_URL;
 
-      if (!API_URL) {
-        alert("API URL not configured");
-        setLoading(false);
-        return;
-      }
+  //     if (!API_URL) {
+  //       alert("API URL not configured");
+  //       setLoading(false);
+  //       return;
+  //     }
 
-      console.log("Submitting to:", `${API_URL}/api/contact`);
-      console.log("Data:", formData);
+  //     console.log("Submitting to:", `${API_URL}/api/contact`);
+  //     console.log("Data:", formData);
 
-      const response = await fetch(`${API_URL}/api/contact`, {
-        method: "POST",
-        headers: { 
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+  //     const response = await fetch(`${API_URL}/api/contact`, {
+  //       method: "POST",
+  //       headers: { 
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(formData),
+  //     });
 
-      const data = await response.json();
+  //     const data = await response.json();
 
-      if (response.ok && data.success) {
-        alert("✅ Your message has been sent successfully!");
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          message: "",
-        });
-      } else {
-        alert("❌ " + (data.message || "Something went wrong. Please try again."));
-      }
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      alert("❌ Network error. Please check your connection and try again.");
-    } finally {
-      setLoading(false);
-    }
-  };
+  //     if (response.ok && data.success) {
+  //       alert("✅ Your message has been sent successfully!");
+  //       setFormData({
+  //         firstName: "",
+  //         lastName: "",
+  //         email: "",
+  //         phone: "",
+  //         message: "",
+  //       });
+  //     } else {
+  //       alert("❌ " + (data.message || "Something went wrong. Please try again."));
+  //     }
+  //   } catch (error) {
+  //     console.error("Error submitting form:", error);
+  //     alert("❌ Network error. Please check your connection and try again.");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
-  useEffect(() => {
-    setTimeout(() => setAnimate(true), 100);
-  }, []);
+   useEffect(() => {
+     setTimeout(() => setAnimate(true), 100);
+   }, []);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
+   useEffect(() => {
+     window.scrollTo(0, 0);
   }, []);
 
   return (
@@ -160,7 +160,6 @@ const Contact = () => {
   <button 
   className="email-btn" 
   onClick={() => { 
-    console.log("Email button clicked!");
     window.location.href = "mailto:ccimsme@gmail.com";
   }}
 >
