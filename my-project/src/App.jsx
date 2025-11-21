@@ -10,7 +10,7 @@ import Contact from "./components/Contact";
 import Gallery from "./components/Gallery";
 import Activity from "./components/Activity";
 // import MembershipForm from "./components/Membership-form";
-import PaymentOptions from "./components/PaymentOption";
+// import PaymentOptions from "./components/PaymentOption";
 import Vision from "./components/Vision";
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/membership" element={<Membership />} />
        {/* <Route path="/membership-form" element={<MembershipForm />} /> */}
-            <Route path="/payment-options" element={<PaymentOptions />} />
+            {/* <Route path="/payment-options" element={<PaymentOptions />} /> */}
         <Route path="/contact" element={<Contact />} />
         <Route path="/gallery" element={<Gallery/>} /> 
           <Route path="/vision" element={<Vision/>} /> 

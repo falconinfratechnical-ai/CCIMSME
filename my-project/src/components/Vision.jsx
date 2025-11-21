@@ -33,9 +33,9 @@ function Vision() {
 <section className="about-section-2 reverse">
   <div className="about-content-2">
     <div className="about-image-2">
+      {/* revival img */}
       <img src={events} alt="Chamber Event" />
     </div>
-
     <div className="about-text-2">
    
       <h2 >Revival, Vision & Innovation</h2>

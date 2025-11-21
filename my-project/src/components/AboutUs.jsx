@@ -11,10 +11,13 @@ import meeting2 from "../assets/event10.jpg";
 import meeting3 from "../assets/we.jpg";
 import meeting4 from "../assets/gallery.jpg";
 import meeting5 from "../assets/download.jpg";
-import meeting6 from "../assets/event6.jpg";
+import meeting6 from "../assets/event6.jpg";        
 import meeting7 from "../assets/event7.jpg";
 import meeting8 from "../assets/event8.jpg";
 import meeting9 from "../assets/event10.jpg";
+import meeting10 from "../assets/event5.jpg";
+import meeting11 from "../assets/chaat.jpg";
+
 
 
 const AboutUs = () => {
@@ -120,9 +123,9 @@ const AboutUs = () => {
             <div className="image-collage">
 
               {/* Our journey */}
-              <img src={event2} alt="Event 1" className="img img-1" />
-              <img src={event1} alt="Event 2" className="img img-2" />
-              <img src={events} alt="Event 3" className="img img-3" />
+              <img src={event1} alt="Event 1" className="img img-1" />
+              <img src={meeting10} alt="Event 2" className="img img-2" />
+              <img src={meeting11} alt="Event 3" className="img img-3" />
             </div>
           </div>
 

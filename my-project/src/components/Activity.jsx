@@ -90,16 +90,11 @@ function Activity() {
         <div className="growth-text1">
          <h1>Growth of Trade & Industry - Our Objectives</h1>
          
-                     <p>It is indisputable that the Chamber will be able to present the requirements of the existing industries and business community to the government and achieve favourable results. Not only that, there is no doubt that the collective has a significant role as the representative that will able to exert major influence on legislations that effect the business community, without direct involvement.</p>
-         
+                     <p>It is indisputable that the Chamber will be able to present the requirements of the existing industries and business community to the government and achieve favourable results. Not only that, there is no doubt that the collective has a significant role as the representative that will able to exert major influence on legislations that effect the business community, without direct involvement.</p>     
                      <p>The Chamber will be able to become a representative of the business community in the economic development activities of Kerala. Especially since about 90% of the enterprises fall under the MSME sector. The Chamber enables the dissemination of directives of national and international Chambers of Commerce and in implementing them.</p>
-         
                      <p>The Chamber has opportunities to represent the business community in the government's educational-cultural-industrial initiatives and involve in it as a representative which can resolve issues in these areas as an intermediary to inform the business community of the new opportunities and governments policies regarding industry and commerce.</p>
-         
                      <p>Not only that, the Chamber is ever willing to play a role in enabling appropriate technical and technological help for their products and facilitate marketing. Through this there is no doubt that it can lead to the growth of industries. By understanding the requirements of the coming age, numerous developments including automation will have to be undertaken.</p>
-         
                      <p>There will be many apprehensions and reservations before new entrants into the field of industry. It is also the task of the Chamber to mitigate such doubts. The Chamber will be a facilitator that will assist new entrepreneurs in finding answers to questions like what are the industries that are possible in Kerala, the access to financial and technical help and the extend of market possibilities. The Chamber will also reveal the opportunities of exports abroad.</p>
-         
                      <p>The Chamber members will also be able to explore the vast possibilities of business expansion through trade exhibitions in keeping with the times for existing and new enterprises. The Chamber aims at the growth of its region and that of itself through such efforts.</p>
         </div>
 

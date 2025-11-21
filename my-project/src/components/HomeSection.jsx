@@ -12,7 +12,7 @@ import meeting3 from "../assets/event2.jpg";
 // import meeting4 from "../assets/event3.jpg";
 import gallery from "../assets/gallery.jpg";
 import gallery1 from "../assets/gallery1.jpg";
-import events from "../assets/events.jpg"; 
+import events from "../assets/events.jpg";
 import img1 from "../assets/event3.jpg";
 import img2 from "../assets/event4.jpg";
 import img3 from "../assets/event5.jpg";
@@ -27,29 +27,29 @@ const HomeSection = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [animate, setAnimate] = useState(false);
   const [whoIndex, setWhoIndex] = useState(0);
-    const [revival, setRevival] = useState(0);
+  const [revival, setRevival] = useState(0);
 
-//growth section
+  //growth section
   const galleryImages = [
     { thumbnail: meeting1, large: meeting1, alt: "Business Event 1" },
-    { thumbnail: weLogo , large: weLogo , alt: "Business Event 2" },
+    { thumbnail: weLogo, large: weLogo, alt: "Business Event 2" },
     { thumbnail: weLogo1, large: weLogo1, alt: "Business Event 3" },
     { thumbnail: meeting2, large: meeting2, alt: "Business Event 4" },
   ];
-//gallery section
+  //gallery section
   const images = [
-    meeting2, meeting3, 
-   forum1 ,
-    weLogo1 , events  ,
-    img1    ,img2     ,
-    img3    ,img4     ,
-    img5    ,img6     ,
+    meeting2, meeting3,
+    forum1, weLogo1,
+    events, img1,
+    img2, img3,
+    img4, img5,
+    img6,
 
   ];
   //who section
-const whoImages = [gallery, chaatLogo, img4];
-//rivival section
-const revivalImg =[meeting1, meeting2, forum1 ];
+  const whoImages = [gallery, chaatLogo, img4];
+  //rivival section
+  const revivalImg = [meeting1, meeting2, forum1];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -63,25 +63,25 @@ const revivalImg =[meeting1, meeting2, forum1 ];
     setTimeout(() => setAnimate(true), 100);
   }, []);
 
-   useEffect(() => {
+  useEffect(() => {
     window.scrollTo(0, 0);
-  }, []); 
+  }, []);
 
-useEffect(() => {
-  const interval = setInterval(() => {
-    setWhoIndex((prev) => (prev + 1) % whoImages.length);
-  }, 3000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setWhoIndex((prev) => (prev + 1) % whoImages.length);
+    }, 3000);
 
-  return () => clearInterval(interval);
-}, []);
+    return () => clearInterval(interval);
+  }, []);
 
-useEffect(() => {
-  const interval = setInterval(() => {
-    setRevival((prev) => (prev + 1) % revivalImg.length);
-  }, 2000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRevival((prev) => (prev + 1) % revivalImg.length);
+    }, 2000);
 
-  return () => clearInterval(interval);
-}, []);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
@@ -93,7 +93,7 @@ useEffect(() => {
         {/* INFO SECTION */}
         <div className="info-section">
           <div className="info-left">
-           <img src={whoImages[whoIndex]} alt="Who We Are" className={`info-image fade-in`} />
+            <img src={whoImages[whoIndex]} alt="Who We Are" className={`info-image fade-in`} />
 
           </div>
           <div className="info-right">
@@ -108,7 +108,7 @@ useEffect(() => {
               and commercial sectors in Kerala. The Chamber is a grouping of individuals involved in Kerala’s varied industrial and commercial aspects. The aim of the
               Chamber is to assist those involved in these sectors in Kerala and to be a hand-holding to the new entrants in to this field and to lead them forward.
               Dynamic industrial expansion is an indispensable requirement for Kerala’s comprehensive growth. It can be seen that small scale industries are suited
-              for Kerala's unique landscape. Small scale industries are the backbone of the nation’s economy. Keeping in account the changing circumstances, as per
+              for Kerala’s unique landscape. Small scale industries are the backbone of the nation’s economy. Keeping in account the changing circumstances, as per
               the MSME law of 2020, business or industries having an investment of Rs.1 crore to Rs.50 crores or having a turnover of Rs.5 crore to Rs.250 crores
               are listed as small-scale industries. Accordingly, there has been proclamation of 11 financial and technical schemes have been declared. In this
               context, groupings like the Chamber are inevitable for the comprehensive growth and progress of the small-scale industrial sector.
@@ -239,8 +239,8 @@ useEffect(() => {
                   key={index}
                   src={img.large}
                   alt={img.alt}
-                  className={`fade-only-image ${index === currentIndex ? "active" : ""}`}                />
-             ))}
+                  className={`fade-only-image ${index === currentIndex ? "active" : ""}`} />
+              ))}
             </div>
 
             <div className="gallery-thumbs">
@@ -267,7 +267,7 @@ useEffect(() => {
                 key={index}
                 src={img}
                 alt={`Event ${index}`}
-                // onClick={() => setSelectedImage(img)}
+              // onClick={() => setSelectedImage(img)}
               />
             ))}
           </div>

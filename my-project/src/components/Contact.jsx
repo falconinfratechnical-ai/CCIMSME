@@ -68,12 +68,12 @@ const Contact = () => {
   //   }
   // };
 
-   useEffect(() => {
-     setTimeout(() => setAnimate(true), 100);
-   }, []);
+  useEffect(() => {
+    setTimeout(() => setAnimate(true), 100);
+  }, []);
 
-   useEffect(() => {
-     window.scrollTo(0, 0);
+  useEffect(() => {
+    window.scrollTo(0, 0);
   }, []);
 
   return (
@@ -133,12 +133,12 @@ const Contact = () => {
               </p>
               <p>
                 📧{" "}
-               <a 
-  href="mailto:ccimsme@gmail.com?subject=Website%20Contact"
-  rel="noopener noreferrer"
->
-  ccimsme@gmail.com
-</a>
+                <a
+                  href="mailto:ccimsme@gmail.com?subject=Website%20Contact"
+                  rel="noopener noreferrer"
+                >
+                  ccimsme@gmail.com
+                </a>
               </p>
               <div className="social-icons">
                 <i className="fab fa-facebook"></i>
@@ -150,30 +150,30 @@ const Contact = () => {
 
           <div className="contact-right">
             <h2 className="scan">Scan Me</h2>
-  <img 
-    src={QR}  
-    alt="Scan QR" 
-    className="qr-image"
-  />
+            <img
+              src={QR}
+              alt="Scan QR"
+              className="qr-image"
+            />
 
-  <div className="contact-buttons">
-  <button 
-  className="email-btn" 
-  onClick={() => { 
-    window.location.href = "mailto:ccimsme@gmail.com";
-  }}
->
-  📧 Email Us
-</button>
+            <div className="contact-buttons">
+              <button
+                className="email-btn"
+                onClick={() => {
+                  window.location.href = "mailto:ccimsme@gmail.com";
+                }}
+              >
+                📧 Email Us
+              </button>
 
-    <button 
-      className="wa-btn"
-      onClick={() => window.open("https://wa.me/919497715888", "_self")}
-    >
-      💬 WhatsApp
-    </button>
-  </div>
-</div>
+              <button
+                className="wa-btn"
+                onClick={() => window.open("https://wa.me/919497715888", "_self")}
+              >
+                💬 WhatsApp
+              </button>
+            </div>
+          </div>
 
         </div>
       </div>
