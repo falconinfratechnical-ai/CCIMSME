@@ -11,12 +11,25 @@ import meeting2 from "../assets/event10.jpg";
 import meeting3 from "../assets/we.jpg";
 import meeting4 from "../assets/gallery.jpg";
 import meeting5 from "../assets/download.jpg";
-import meeting6 from "../assets/event6.jpg";        
+import meeting6 from "../assets/event6.jpg";
 import meeting7 from "../assets/event7.jpg";
 import meeting8 from "../assets/event8.jpg";
 import meeting9 from "../assets/event10.jpg";
 import meeting10 from "../assets/event5.jpg";
 import meeting11 from "../assets/chaat.jpg";
+
+import img15 from "../assets/event11.jpg";
+import img16 from "../assets/event12.jpg";
+import img17 from "../assets/event13.jpg";
+import img18 from "../assets/event14.jpg";
+import img19 from "../assets/event15.jpg";
+import img20 from "../assets/event16.jpg";
+import img21 from "../assets/event17.jpg";
+import img22 from "../assets/event18.jpg";
+import img23 from "../assets/event19.jpg";
+import img24 from "../assets/event20.jpg";
+import img25 from "../assets/event21.jpg";
+import img26 from "../assets/event22.jpg";
 
 
 
@@ -67,18 +80,11 @@ const AboutUs = () => {
 
   //Chamber Events & Highlights
   const images = [
-    meeting1,
-    meeting2,
-    meeting3,
-    meeting4,
-    meeting5,
-    meeting6,
-    meeting7,
-    meeting8,
-    meeting9,
-    event3,
-    event2,
-    event1,
+    img15, img16, img17, img18,
+    img19, img20, img21, img22,
+      meeting1, meeting2, meeting3, meeting4,
+    img23, img25, img24, img26,
+  
   ];
 
   const IMAGES_PER_PAGE = 4;
@@ -123,8 +129,8 @@ const AboutUs = () => {
             <div className="image-collage">
 
               {/* Our journey */}
-              <img src={event1} alt="Event 1" className="img img-1" />
-              <img src={meeting10} alt="Event 2" className="img img-2" />
+              <img src={meeting10} alt="Event 1" className="img img-1" />
+          <img src={img16} alt="Event 2" className="img img-2" />
               <img src={meeting11} alt="Event 3" className="img img-3" />
             </div>
           </div>

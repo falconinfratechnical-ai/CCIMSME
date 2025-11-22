@@ -20,6 +20,16 @@ import img4 from "../assets/event6.jpg";
 import img5 from "../assets/event7.jpg";
 import img6 from "../assets/event8.jpg";
 // import img7 from "../assets/event10.jpg";
+import event11 from "../assets/event11.jpg";
+import img16 from "../assets/event12.jpg";
+import img17 from "../assets/event13.jpg";
+import img18 from "../assets/event14.jpg";
+import img19 from "../assets/event15.jpg";
+import img20 from "../assets/event16.jpg";
+import img21 from "../assets/event17.jpg";
+import img22 from "../assets/event18.jpg";
+import img23 from "../assets/event19.jpg";
+import img24 from "../assets/event22.jpg";
 
 
 const HomeSection = () => {
@@ -31,14 +41,15 @@ const HomeSection = () => {
 
   //growth section
   const galleryImages = [
-    { thumbnail: meeting1, large: meeting1, alt: "Business Event 1" },
+    { thumbnail: event11, large: event11, alt: "Business Event 1" },
     { thumbnail: weLogo, large: weLogo, alt: "Business Event 2" },
     { thumbnail: weLogo1, large: weLogo1, alt: "Business Event 3" },
-    { thumbnail: meeting2, large: meeting2, alt: "Business Event 4" },
+    { thumbnail: img16, large: img16, alt: "Business Event 4" },
   ];
   //gallery section
   const images = [
-    meeting2, meeting3,
+    img18,img19,img20,img21,img22,img23,
+    event11, img17, img16, meeting2, meeting3,
     forum1, weLogo1,
     events, img1,
     img2, img3,
@@ -49,7 +60,7 @@ const HomeSection = () => {
   //who section
   const whoImages = [img3, chaatLogo, img4];
   //rivival section
-  const revivalImg = [meeting1, meeting2, forum1];
+  const revivalImg = [img22,img19, img24];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -88,7 +99,7 @@ const HomeSection = () => {
       <div className={`home-wrapper ${animate ? "page-enter" : ""}`}>
         {/* HERO / BANNER SECTION */}
         <div className="hero-section">
-          <img src={gallery1} alt="Banner" className="hero-image" />
+          <img src={event11} alt="Banner" className="hero-image" />
         </div>
         {/* INFO SECTION */}
         <div className="info-section">

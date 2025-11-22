@@ -14,13 +14,29 @@ import img11 from "../assets/event6.jpg";
 import img12 from "../assets/event7.jpg";
 import img13 from "../assets/event8.jpg";
 import img14 from "../assets/event10.jpg";
+import img15 from "../assets/event11.jpg";
+import img16 from "../assets/event12.jpg";
+import img17 from "../assets/event13.jpg";
+import img18 from "../assets/event14.jpg";
+import img19 from "../assets/event15.jpg";
+import img20 from "../assets/event16.jpg";
+import img21 from "../assets/event17.jpg";
+import img22 from "../assets/event18.jpg";
+import img23 from "../assets/event19.jpg";
+import img24 from "../assets/event20.jpg";
+import img25 from "../assets/event21.jpg";
+import img26 from "../assets/event22.jpg";
+import img27 from "../assets/event23.jpg";
+
 
 const Gallery = () => {
   const [animate, setAnimate] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(null);
 
   const images = [
-    img1, img3, img4, img5, img6, img7,
+    img15,img16,img17,img18,img19,img20,img21,img22,img23,img25
+    ,img24,img26,img27
+    ,img1, img3, img4, img5, img6, img7,
     img8, img9, img10, img11, img12, img13, img14
   ];
 
