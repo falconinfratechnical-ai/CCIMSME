@@ -30,6 +30,12 @@ import img21 from "../assets/event17.jpg";
 import img22 from "../assets/event18.jpg";
 import img23 from "../assets/event19.jpg";
 import img24 from "../assets/event22.jpg";
+import img27 from "../assets/event23.jpg";
+import img28 from "../assets/event24.jpg";
+import img29 from "../assets/event25.jpg";
+import img30 from "../assets/event26.jpg";
+import img31 from "../assets/event27.jpg";
+
 
 
 const HomeSection = () => {
@@ -48,6 +54,7 @@ const HomeSection = () => {
   ];
   //gallery section
   const images = [
+    img28,img29,img30,img31,img27,
     img18,img19,img20,img21,img22,img23,
     event11, img17, img16, meeting2, meeting3,
     forum1, weLogo1,
