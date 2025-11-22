@@ -213,7 +213,7 @@ const HomeSection = () => {
           <h2>Connecting Businesses, Empowering Communities</h2>
           <div className="forums-container">
             <div className="forum-card">
-              <img src={forum1} alt="YES" />
+              <img src={event11} alt="YES" />
               <h3>Guided Inception</h3>
               <p>
                 We assist aspiring entrepreneurs in identifying viable industries,
@@ -231,7 +231,7 @@ const HomeSection = () => {
               <p>We assist struggling enterprises by facilitating connections with financial institutions and offering technical and marketing support to recover and grow.</p>
             </div>
             <div className="forum-card">
-              <img src={weLogo1} alt="WE" />
+              <img src={img30} alt="WE" />
               <h3>NRI Focus</h3>
               <p>Delivering dedicated, unified support for returning NRIs, helping them transition their global experience into successful, stable enterprises in Kerala.</p>
             </div>
