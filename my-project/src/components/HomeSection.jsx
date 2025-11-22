@@ -106,7 +106,7 @@ const HomeSection = () => {
       <div className={`home-wrapper ${animate ? "page-enter" : ""}`}>
         {/* HERO / BANNER SECTION */}
         <div className="hero-section">
-          <img src={img29} alt="Banner" className="hero-image" />
+          <img src={img29} alt="Banner" className="hero-image" loading="lazy" />
         </div>
         {/* INFO SECTION */}
         <div className="info-section">
