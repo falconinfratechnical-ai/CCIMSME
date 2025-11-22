@@ -27,6 +27,11 @@ import img24 from "../assets/event20.jpg";
 import img25 from "../assets/event21.jpg";
 import img26 from "../assets/event22.jpg";
 import img27 from "../assets/event23.jpg";
+import img28 from "../assets/event24.jpg";
+import img29 from "../assets/event25.jpg";
+import img30 from "../assets/event26.jpg";
+import img31 from "../assets/event27.jpg";
+
 
 
 const Gallery = () => {
@@ -34,7 +39,8 @@ const Gallery = () => {
   const [lightboxIndex, setLightboxIndex] = useState(null);
 
   const images = [
-    img15,img16,img17,img18,img19,img20,img21,img22,img23,img25
+    img28,img29,img30,img31,
+    img15,img16,img18,img19,img20,img21,img22,img23,img25
     ,img24,img26,img27
     ,img1, img3, img4, img5, img6, img7,
     img8, img9, img10, img11, img12, img13, img14

@@ -30,6 +30,11 @@ import img23 from "../assets/event19.jpg";
 import img24 from "../assets/event20.jpg";
 import img25 from "../assets/event21.jpg";
 import img26 from "../assets/event22.jpg";
+import img28 from "../assets/event24.jpg";
+import img29 from "../assets/event25.jpg";
+import img30 from "../assets/event26.jpg";
+import img31 from "../assets/event27.jpg";
+
 
 
 
@@ -80,9 +85,9 @@ const AboutUs = () => {
 
   //Chamber Events & Highlights
   const images = [
+     img28,img29,img30,img31,
     img15, img16, img17, img18,
     img19, img20, img21, img22,
-      meeting1, meeting2, meeting3, meeting4,
     img23, img25, img24, img26,
   
   ];
@@ -126,12 +131,12 @@ const AboutUs = () => {
       <section className="about-section">
         <div className="about-content">
           <div className="about-images">
-            <div className="image-collage">
+            <div className="image-collage">img16
 
               {/* Our journey */}
               <img src={meeting10} alt="Event 1" className="img img-1" />
-          <img src={img16} alt="Event 2" className="img img-2" />
-              <img src={meeting11} alt="Event 3" className="img img-3" />
+          <img src={meeting11} alt="Event 2" className="img img-2" />
+              <img src={img22} alt="Event 3" className="img img-3" />
             </div>
           </div>
 
@@ -216,7 +221,7 @@ const AboutUs = () => {
         <div className="about-content-2">
           <div className="about-image-2">
             {/* Revival-img */}
-            <img src={events} alt="Chamber Event" />
+            <img src={img21} alt="Chamber Event" />
           </div>
 
           <div className="about-text-2">
