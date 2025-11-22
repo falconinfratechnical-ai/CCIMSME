@@ -2,11 +2,11 @@
 import React, { useState, useEffect } from "react";
 import "./Membership.css"
 import banner from "../assets/theme.jpg";
-import { useNavigate } from "react-router-dom"
+// import { useNavigate } from "react-router-dom"
 
 const Membership = () => {
   const [animate, setAnimate] = useState(false);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
  const handleBuy = () => {
   window.open("https://docs.google.com/forms/d/e/1FAIpQLSf3IpAiWu1dJzKRT_7d3MTKWQJzS-_OAQ3zF5ScWoL_GmCwbw/viewform?usp=preview", "_blank");
 };

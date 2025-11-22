@@ -47,7 +47,7 @@ const HomeSection = () => {
 
   ];
   //who section
-  const whoImages = [gallery, chaatLogo, img4];
+  const whoImages = [img3, chaatLogo, img4];
   //rivival section
   const revivalImg = [meeting1, meeting2, forum1];
 
